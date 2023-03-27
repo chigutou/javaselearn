@@ -1,6 +1,7 @@
 package iofilelearn;
 
 import java.io.File;
+import java.io.InputStream;
 import java.sql.SQLOutput;
 
 /**
