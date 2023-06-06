@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:hsf="http://www.taobao.com/hsf"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.taobao.com/hsf http://www.taobao.com/hsf/hsf.xsd">
+
+    <hsf:provider id="pmPermissionServiceProvider" ref="pmPermissionService" interface="com.dajia.permission.service.PmPermissionService"
+                  group="${spring.hsf.group}" version="${spring.hsf.version}" clientTimeout="100000"/>
+    <hsf:consumer id="pmToilServiceProvider" ref="pmToilService" interface="com.dajia.permission.service.PmToilService"
+                  group="${spring.hsf.group}" version="${spring.hsf.version}" clientTimeout="100000"/>
+    <hsf:provider id="pmResourceServiceProvider" ref="pmResourceService" interface="com.dajia.permission.service.PmResourceService"
+                  group="${spring.hsf.group}" version="${spring.hsf.version}" clientTimeout="100000"/>
+    <hsf:provider id="pmModuleServiceProvider" ref="pmModuleService" interface="com.dajia.permission.service.PmModuleService"
+                  group="${spring.hsf.group}" version="${spring.hsf.version}" clientTimeout="100000"/>
+    <hsf:provider id="pmGroupRoleServiceProvider" ref="pmGroupRoleService" interface="com.dajia.permission.service.PmGroupRoleService"
+                  group="${spring.hsf.group}" version="${spring.hsf.version}" clientTimeout="100000"/>
+    <hsf:provider id="pmOrgRoleServiceProvider" ref="pmOrgRoleService" interface="com.dajia.permission.service.PmOrgRoleService"
+                  group="${spring.hsf.group}" version="${spring.hsf.version}" clientTimeout="100000"/>
+    <hsf:provider id="pmCustomOrgRoleServiceProvider" ref="pmCustomOrgRoleService" interface="com.dajia.permission.service.PmCustomOrgRoleService"
+                  group="${spring.hsf.group}" version="${spring.hsf.version}" clientTimeout="100000"/>
+    <hsf:provider id="pmDistinctOrgRoleServiceProvider" ref="pmDistinctOrgRoleService" interface="com.dajia.permission.service.PmDistinctOrgRoleService"
+                  group="${spring.hsf.group}" version="${spring.hsf.version}" clientTimeout="100000"/>
+    <hsf:provider id="pmPersonRoleServiceProvider" ref="pmPersonRoleService" interface="com.dajia.permission.service.PmPersonRoleService"
+                  group="${spring.hsf.group}" version="${spring.hsf.version}" clientTimeout="100000"/>
+    <hsf:provider id="pmRoleModuleServiceProvider" ref="pmRoleModuleService" interface="com.dajia.permission.service.PmRoleModuleService"
+                  group="${spring.hsf.group}" version="${spring.hsf.version}" clientTimeout="100000"/>
+    <hsf:provider id="pmRoleServiceProvider" ref="pmRoleService" interface="com.dajia.permission.service.PmRoleService"
+                  group="${spring.hsf.group}" version="${spring.hsf.version}" clientTimeout="100000"/>
+    <hsf:provider id="pmRoleGroupServiceProvider" ref="pmRoleGroupService" interface="com.dajia.permission.service.PmRoleGroupService"
+                  group="${spring.hsf.group}" version="${spring.hsf.version}" clientTimeout="100000"/>
+
+
+    <hsf:provider id="pmPostRoleServiceProvider" ref="pmPostRoleService" interface="com.dajia.permission.service.PmPostRoleService"
+                  group="${spring.hsf.group}" version="${spring.hsf.version}" clientTimeout="100000"/>
+</beans>

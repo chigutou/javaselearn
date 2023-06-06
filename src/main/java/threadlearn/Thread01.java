@@ -9,7 +9,15 @@ public class Thread01 {
         //创建cat对象
         Cat cat = new Cat();
         cat.start();
-
+        System.out.println("===========");
+        for (int i = 0; i < 70; i++){
+            System.out.println("zhuxiancheng:" + i);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }
 
@@ -24,7 +32,7 @@ class Cat extends Thread{
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            if(times == 10) {break;}
+            if(times == 100) {break;}
         }
     }
 }
