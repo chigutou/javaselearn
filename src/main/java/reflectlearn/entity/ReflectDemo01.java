@@ -26,6 +26,34 @@ public class ReflectDemo01 {
         method1.invoke(o);
         Method method2 = cls.getMethod(method02);
         method2.invoke(o);
+        System.out.println("================");
+//        m1(catclasspath);
+//        m2(catclasspath);
+    }
 
+
+    public static void m1(String s1) throws ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+        Class<?> cls = Class.forName(s1);
+        Object o = cls.newInstance();
+        Method method = cls.getMethod("hi");
+//        method.setAccessible(true);
+        long t1 = System.currentTimeMillis();
+        for (int i = 0; i < 999999999; i++) {
+            method.invoke(o);
+        }
+
+        long t2 = System.currentTimeMillis();
+        System.out.println("m1: " + (t2 - t1));
+    }
+
+    public static void m2(String s1) throws ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+        Cat cat = new Cat();
+        long t1 = System.currentTimeMillis();
+        for (int i = 0; i < 999999999; i++) {
+            cat.hi();
+        }
+
+        long t2 = System.currentTimeMillis();
+        System.out.println("m2: " + (t2 - t1));
     }
 }
