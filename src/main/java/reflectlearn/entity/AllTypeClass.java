@@ -6,6 +6,11 @@ package reflectlearn.entity;
  */
 public class AllTypeClass {
     public static void main(String[] args) {
-
+        String str = "asdfafdad#222salfdlasfd";
+        int i = str.indexOf("#");
+        System.out.println(i);
+        String substring = str.substring(i);
+        System.out.println(substring);
+        System.out.println(str.substring(0,i));
     }
 }
