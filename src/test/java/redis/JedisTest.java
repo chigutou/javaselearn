@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import redis.clients.jedis.Jedis;
 import redislearn.util.JedisConnectionFactory;
 
+import java.math.BigDecimal;
 import java.util.Map;
 
 /**
@@ -48,11 +49,23 @@ public class JedisTest {
         });
     }
 
+
     @After
     public void tearDown(){
         if(jedis != null){
             jedis.close();
         }
+    }
+
+    @Test
+    public void testBigDecimal(){
+        BigDecimal b1 = new BigDecimal("2.3");
+        BigDecimal b2 = new BigDecimal("2.3");
+        BigDecimal b3 = new BigDecimal("2.4");
+        b3.compareTo(null);
+        System.out.println(b1.compareTo(b2));
+        System.out.println(b2.compareTo(b3));
+        System.out.println(b3.compareTo(b2));
     }
 
 }
