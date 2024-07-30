@@ -6,6 +6,10 @@ package threadlearn;
  */
 public class Thread01 {
     public static void main(String[] args) {
+        Runtime runtime = Runtime.getRuntime();
+        //获取可用cpu个数
+        int i1 = runtime.availableProcessors();
+        System.out.println("cpu:" + i1);
         //创建cat对象
         Cat cat = new Cat();
         cat.start();

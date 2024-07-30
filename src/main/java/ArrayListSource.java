@@ -32,7 +32,7 @@ public class ArrayListSource {
         list.add(null);
         System.out.println("a".substring(1).contains("adaf"));
 
-        Cat cat = new Cat();
+        final Cat cat = new Cat();
         cat.setAge(1);
         cat.setName("mao1");
         Cat cat1 = cat;
@@ -45,6 +45,9 @@ public class ArrayListSource {
         String t2 = t1;
         t2 = "123";
         System.out.println(t1);
-        System.out.println(t2);
+        System.
+                out.println(t2);
+
+        Integer integer = new Integer(2);
     }
 }
